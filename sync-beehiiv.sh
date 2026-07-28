@@ -44,7 +44,7 @@ restore_branch() {
 
 # Netdata monitoring + branch restore
 _CRON_START=$(date +%s)
-trap '_RC=$?; restore_branch; echo "cron_exit.beehiiv_sync:$_RC|g" | nc -u -w0 127.0.0.1 8125 2>/dev/null; echo "cron_time.beehiiv_sync:$(( $(date +%s) - _CRON_START ))|g" | nc -u -w0 127.0.0.1 8125 2>/dev/null' EXIT
+trap '_RC=$?; restore_branch; { echo "cron_exit.beehiiv_sync:$_RC|g" | nc -u -w0 127.0.0.1 8125; } 2>/dev/null || true; { echo "cron_time.beehiiv_sync:$(( $(date +%s) - _CRON_START ))|g" | nc -u -w0 127.0.0.1 8125; } 2>/dev/null || true; exit $_RC' EXIT
 
 log "=== Beehiiv sync started ==="
 
