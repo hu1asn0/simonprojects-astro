@@ -7,25 +7,11 @@ const isEn = (Astro.currentLocale || 'hu') === 'en';
   <div class="container">
     <p>&copy; {year} Simon András e.v. — {isEn ? 'All rights reserved!' : 'Minden jog fenntartva!'}</p>
     <div class="footer-links">
-      <a id="footer-email" href="#">...</a>
+      <span class="footer-email">info[ at]simonprojects.eu</span>
       <span class="separator">&middot;</span>
       <a href="/impresszum/">{isEn ? 'Legal notice' : 'Impresszum'}</a>
     </div>
   </div>
-  <script>
-    function initFooterEmail() {
-      const u = 'info';
-      const d = 'simonprojects.eu';
-      const addr = `${u}@${d}`;
-      const el = document.getElementById('footer-email');
-      if (el) {
-        (el as HTMLAnchorElement).href = `mailto:${addr}`;
-        el.textContent = addr;
-      }
-    }
-    initFooterEmail();
-    document.addEventListener('astro:after-swap', initFooterEmail);
-  </script>
 </footer>
 
 <style>
@@ -52,6 +38,10 @@ const isEn = (Astro.currentLocale || 'hu') === 'en';
   }
 
   .separator {
+    color: var(--color-text-muted);
+  }
+
+  .footer-email {
     color: var(--color-text-muted);
   }
 </style>

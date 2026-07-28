@@ -21,9 +21,7 @@ const description = 'Lépjen kapcsolatba Simon Andrással! IT projekt menedzsmen
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
             <h2>Email</h2>
-            <a id="email-link" class="contact-link" href="#">
-              <span class="email-placeholder">Betöltés...</span>
-            </a>
+            <span class="contact-link">info[ at]simonprojects.eu</span>
           </div>
 
           <div class="contact-item">
@@ -35,30 +33,9 @@ const description = 'Lépjen kapcsolatba Simon Andrással! IT projekt menedzsmen
           </div>
         </div>
 
-        <a id="cta-email" class="cta-button" href="#">
-          Irj nekem
-        </a>
+        <span class="cta-button">Irj nekem: info[ at]simonprojects.eu</span>
       </div>
     </div>
-
-    <script>
-      function initContactEmail() {
-        const u = 'info';
-        const d = 'simonprojects.eu';
-        const addr = `${u}@${d}`;
-        const link = document.getElementById('email-link');
-        const cta = document.getElementById('cta-email');
-        if (link) {
-          (link as HTMLAnchorElement).href = `mailto:${addr}`;
-          link.textContent = addr;
-        }
-        if (cta) {
-          (cta as HTMLAnchorElement).href = `mailto:${addr}`;
-        }
-      }
-      initContactEmail();
-      document.addEventListener('astro:after-swap', initContactEmail);
-    </script>
   </main>
 </BaseLayout>
 
