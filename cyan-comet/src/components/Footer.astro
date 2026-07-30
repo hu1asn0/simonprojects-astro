@@ -5,7 +5,11 @@ const isEn = (Astro.currentLocale || 'hu') === 'en';
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; {year} Simon András e.v. — {isEn ? 'All rights reserved!' : 'Minden jog fenntartva!'}</p>
+    <p>&copy; {year} Prio Consulting Kft. — {isEn ? 'All rights reserved!' : 'Minden jog fenntartva!'}</p>
+    <p class="footer-operator">
+      {isEn ? 'simonprojects.eu is operated by ' : 'A simonprojects.eu üzemeltetője a '}<a
+        href="https://prioconsulting.hu/">Prio Consulting Kft.</a>{isEn ? '' : '.'}
+    </p>
     <div class="footer-links">
       <span class="footer-email">info[ at]simonprojects.eu</span>
       <span class="separator">&middot;</span>
@@ -43,5 +47,9 @@ const isEn = (Astro.currentLocale || 'hu') === 'en';
 
   .footer-email {
     color: var(--color-text-muted);
+  }
+
+  .footer-operator {
+    font-size: 0.8125rem;
   }
 </style>

@@ -1,33 +1,76 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'Impresszum | Simon András — Egyéni Vállalkozó, Budapest';
-const description = 'Simon András egyéni vállalkozó — jogi információk, adószám, elérhetőség. IT projekt menedzsment és AI integrációs szolgáltatások Budapestről, Magyarországról.';
+const title = 'Impresszum | Prio Consulting Kft. — simonprojects.eu';
+const description = 'A simonprojects.eu üzemeltetője a Prio Consulting Kft. — cégadatok, jogi információk, elérhetőség. IT projekt menedzsment és alkalmazott AI Budapestről.';
 ---
 
 <BaseLayout title={title} description={description}>
   <main class="container impresszum-page">
     <h1>Impresszum</h1>
 
+    <p class="intro">
+      A simonprojects.eu oldalt a <strong>Prio Consulting Kft.</strong> üzemelteti. Az oldal a cég
+      alkalmazott AI szakmai műhelyeként működik, önálló jogi entitást nem képvisel.
+    </p>
+
+    <h2>Üzemeltető cégadatok</h2>
     <dl>
-      <dt>Név</dt>
-      <dd>Simon András Ev.</dd>
+      <dt>Cégnév</dt>
+      <dd>Prio Consulting Korlátolt Felelősségű Társaság</dd>
+
+      <dt>Rövidített név</dt>
+      <dd>Prio Consulting Kft.</dd>
+
+      <dt>Székhely</dt>
+      <dd>1077 Budapest, Wesselényi utca 4., 3.em./15A</dd>
+
+      <dt>Levelezési cím</dt>
+      <dd>1108 Budapest, Bányató u. 26, 6 em./27</dd>
+
+      <dt>Cégjegyzékszám</dt>
+      <dd>01-09-379383</dd>
 
       <dt>Adószám</dt>
-      <dd>68487959-2-42</dd>
+      <dd>29024331-2-42</dd>
 
-      <dt>Nyilvántartási szám</dt>
-      <dd>51817811</dd>
+      <dt>EU adószám</dt>
+      <dd>HU29024331</dd>
+
+      <dt>Képviselő</dt>
+      <dd>Simon András, ügyvezető</dd>
+
+      <dt>Telefon</dt>
+      <dd>+36-30-822-5771</dd>
+
+      <dt>Céges email</dt>
+      <dd><span class="obf-email">info[ at]prioconsulting.hu</span></dd>
+
+      <dt>Oldal email</dt>
+      <dd><span class="obf-email">info[ at]simonprojects.eu</span></dd>
+    </dl>
+
+    <h2>Tárhelyszolgáltató</h2>
+    <dl class="legal-details">
+      <dt>Név</dt>
+      <dd>Websupport Magyarország Kft. (mhosting.hu)</dd>
 
       <dt>Cím</dt>
-      <dd>1108 Budapest, Bányató utca 26., 6. em. 27.</dd>
+      <dd>1119 Budapest, Fehérvári út 97-99.</dd>
 
-      <dt>Bankszámlaszám</dt>
-      <dd>11710002-24145552</dd>
+      <dt>Telefon</dt>
+      <dd>+36 1 700 2323</dd>
 
-      <dt>Bank</dt>
-      <dd>OTP Bank</dd>
+      <dt>Email</dt>
+      <dd><span class="obf-email">info[ at]mhosting.hu</span></dd>
     </dl>
+
+    <h2>Elsődleges impresszum</h2>
+    <p>
+      A teljes körű cégadatokat — bankszámla, szerzői jogi és felelősségkizárási nyilatkozat —
+      a Prio Consulting Kft. hivatalos impresszuma tartalmazza:
+      <a href="https://prioconsulting.hu/impresszum/">prioconsulting.hu/impresszum</a>
+    </p>
   </main>
 </BaseLayout>
 
@@ -39,7 +82,20 @@ const description = 'Simon András egyéni vállalkozó — jogi információk, 
 
   h1 {
     font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  .intro,
+  .impresszum-page p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
   }
 
   dl {
