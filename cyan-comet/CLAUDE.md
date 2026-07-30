@@ -40,7 +40,7 @@ cyan-comet/
 | Portfólióm | `projects.astro` | kész | kész |
 | Elérhetőség | `contact.astro` | kész | kész |
 | 404 | `404.astro` | kész | — |
-| Impresszum | `impresszum.astro` | kész | — |
+| Impresszum | `impresszum.astro` | kész | kész (`en/impresszum.astro`) |
 
 ## Dizájn rendszer
 

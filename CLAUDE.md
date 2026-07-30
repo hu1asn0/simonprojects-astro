@@ -12,6 +12,12 @@ A `simonprojects.eu` WordPress oldal kiváltása Astro 6.x statikus site-tal.
 
 A `deploy` branch tartalmazza a kész `dist/` kimenetet. A cPanel naponta pull-olja.
 
+**Szolgáltató vs. szerver — ne keverd össze:** a tárhelyszolgáltató a **Websupport
+Magyarország Kft. (mhosting.hu)**, a kiszolgáló gép hostneve viszont `s40.tarhely.com`
+(a `simonprojects.eu` A rekordja `185.111.89.234`, reverse DNS-ben ez látszik). A kettő nem
+mond ellent egymásnak, csak más réteg — az impresszumba a **szolgáltató** cégadatai
+kellenek, nem a szerver hostneve.
+
 **Manuális deploy lépések:**
 
 ```bash
